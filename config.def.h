@@ -70,9 +70,8 @@ static const struct arg args[] = {
   //{ run_command         , "%s", "~/rc/config/i3/blocks/volume"},
   //{ run_command         , "%s", "~/rc/config/i3/blocks/volume-pulseaudio"},
   //{ vol_perc            , " | %s", "/dev/mixer" },
-
-  { datetime            , " | %s", "%m/%d/%Y, %I:%M%P |" },
-  { run_command         , "%s", "~/rc/config/i3/blocks/battery"},
+  { datetime            , " | %s", "%a %b %d" },
+  { run_command         , " %s", "~/rc/config/i3/blocks/battery"},
   // igorg: let's try without ssid/network strength
   //{ run_command         , " %s ", "~/rc/config/i3/blocks/ssid"},
   //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/rc/config/i3/blocks/network"},
