@@ -67,7 +67,7 @@ static const char unknown_str[] = "n/a";
 // calendar:      
 // keyboard layout:         
 // audio:                     
-// battery:               
+// battery:               
 static const struct arg args[] = {
   /* function           format          argument */
   { hostname            , "💻%s", NULL },
