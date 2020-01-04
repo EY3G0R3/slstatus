@@ -61,17 +61,24 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
+
+// alternative icons (requires font-awesome):
+// hostname:          💻
+// calendar:      
+// keyboard layout:         
+// audio:                     
+// battery:               
 static const struct arg args[] = {
   /* function           format          argument */
-  { hostname            , " %s", NULL },
+  { hostname            , "💻%s", NULL },
   //{ keymap              , " | %s", NULL }
-  { run_command         , " | %s", "~/rc/config/i3/blocks/layout"},
+  { run_command         , "  %s", "~/rc/config/i3/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
-  //{ run_command         , "%s", "~/rc/config/i3/blocks/volume"},
-  //{ run_command         , "%s", "~/rc/config/i3/blocks/volume-pulseaudio"},
-  //{ vol_perc            , " | %s", "/dev/mixer" },
-  { datetime            , " | %s", "%a %b %d" },
-  { run_command         , " %s", "~/rc/config/i3/blocks/battery"},
+  //{ run_command         , "%s", "~/rc/coffig/i3/blocks/volume"},
+  //{ run_command         b "%s", "~/rc/config/i3/blocks/volume-pulseaudio"},
+  //{ vol_perc            , "%s", "/dev/mixer" },
+  { datetime            , "  %s", "%a %b %d" },
+  { run_command         , "  %s", "~/rc/config/i3/blocks/battery"},
   // igorg: let's try without ssid/network strength
   //{ run_command         , " %s ", "~/rc/config/i3/blocks/ssid"},
   //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/rc/config/i3/blocks/network"},
