@@ -63,14 +63,21 @@ static const char unknown_str[] = "n/a";
  */
 
 // alternative icons (requires font-awesome):
-// hostname:          💻
-// calendar:      
-// keyboard layout:         
-// audio:                     
-// battery:               
+// (period in the end is needed so trailing whitespace is not autostripped
+// and last characters are rendered well in terminal)
+// hostname:          💻   .
+// calendar:        .
+// keyboard layout:          .
+// audio:                       .
+// battery:                .
 static const struct arg args[] = {
   /* function           format          argument */
   { hostname            , "💻%s", NULL },
+
+  // Alternative option, without icons, pure text: <hostname> on <date>
+  //{ hostname            , "%s", NULL },
+  //{ datetime            , " on %s", "%a %b %d" },
+
   //{ keymap              , " | %s", NULL }
   { run_command         , "  %s", "~/rc/config/i3/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
