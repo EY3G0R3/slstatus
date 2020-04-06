@@ -79,16 +79,16 @@ static const struct arg args[] = {
   //{ datetime            , " on %s", "%a %b %d" },
 
   //{ keymap              , " | %s", NULL }
-  { run_command         , "  %s", "~/rc/config/i3/blocks/layout"},
+  { run_command         , "  %s", "~/.config/i3blocks/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
-  //{ run_command         , "%s", "~/rc/coffig/i3/blocks/volume"},
-  //{ run_command         b "%s", "~/rc/config/i3/blocks/volume-pulseaudio"},
+  //{ run_command         , "%s", "~/.config/i3blocks/blocks/volume"},
+  //{ run_command         b "%s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   //{ vol_perc            , "%s", "/dev/mixer" },
   { datetime            , "  %s", "%a %b %d" },
-  { run_command         , "  %s", "~/rc/config/i3/blocks/battery"},
+  { run_command         , "  %s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
-  //{ run_command         , " %s ", "~/rc/config/i3/blocks/ssid"},
-  //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/rc/config/i3/blocks/network"},
+  //{ run_command         , " %s ", "~/.config/i3blocks/blocks/ssid"},
+  //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/.config/i3blocks/blocks/network"},
   //{ wifi_perc           , "%s","wlan0"},
   //{ wifi_essid          , "%s","wlan0"},
 };
