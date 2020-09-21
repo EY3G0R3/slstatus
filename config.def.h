@@ -72,20 +72,19 @@ static const char unknown_str[] = "n/a";
 // battery:                .
 static const struct arg args[] = {
   /* function           format          argument */
-  { hostname            , "💻%s", NULL },
+  { hostname            , "%s", NULL },
 
   // Alternative option, without icons, pure text: <hostname> on <date>
   //{ hostname            , "%s", NULL },
   //{ datetime            , " on %s", "%a %b %d" },
-
   //{ keymap              , " | %s", NULL }
-  { run_command         , "  %s", "~/.config/i3blocks/blocks/layout"},
+  { run_command         , " %s", "~/.config/i3blocks/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
   //{ run_command         , "%s", "~/.config/i3blocks/blocks/volume"},
   //{ run_command         b "%s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   //{ vol_perc            , "%s", "/dev/mixer" },
-  { datetime            , "  %s", "%a %b %d" },
-  { run_command         , "  %s", "~/.config/i3blocks/blocks/battery"},
+  { datetime            , " %s", "%a %b %d" },
+  { run_command         , " %s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
   //{ run_command         , " %s ", "~/.config/i3blocks/blocks/ssid"},
   //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/.config/i3blocks/blocks/network"},
