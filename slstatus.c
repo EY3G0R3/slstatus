@@ -21,7 +21,7 @@ char buf[1024];
 static int done;
 static Display *dpy;
 
-#include "config.h"
+#include "config.def.h"
 
 static void
 terminate(const int signo)
