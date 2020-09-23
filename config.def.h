@@ -78,13 +78,15 @@ static const struct arg args[] = {
   //{ hostname            , "%s", NULL },
   //{ datetime            , " on %s", "%a %b %d" },
   //{ keymap              , " | %s", NULL }
-  { run_command         , " %s", "~/.config/i3blocks/blocks/layout"},
+  { run_command         , " / %s", "~/.config/i3blocks/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
   //{ run_command         , "%s", "~/.config/i3blocks/blocks/volume"},
   //{ run_command         b "%s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   //{ vol_perc            , "%s", "/dev/mixer" },
-  { datetime            , " %s", "%Y-%m-%d" },
-  { run_command         , " %s", "~/.config/i3blocks/blocks/battery"},
+  { run_command         , " / %s", "~/bin/igoraudio_status"},
+  { datetime            , " / %s", "%Y-%m-%d" },
+  // battery script prints a single space when no battery is installed
+  { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
   //{ run_command         , " %s ", "~/.config/i3blocks/blocks/ssid"},
   //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/.config/i3blocks/blocks/network"},
