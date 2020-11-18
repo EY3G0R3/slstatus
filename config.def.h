@@ -70,6 +70,7 @@ static const char unknown_str[] = "n/a";
 // keyboard layout:          .
 // audio:                       .
 // battery:                .
+// cpu: 
 static const struct arg args[] = {
   /* function           format          argument */
   { hostname            , "%s", NULL },
@@ -81,6 +82,7 @@ static const struct arg args[] = {
   { run_command         , " / %s", "~/.config/i3blocks/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
   //{ vol_perc            , "%s", "/dev/mixer" },
+  { cpu_perc           , " /  %s%%", NULL},
   { run_command         , " / %s", "~/bin/igoraudio_status"},
   { run_command         , " %s", "~/.config/i3blocks/blocks/volume"},
   //{ run_command       , " %s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
