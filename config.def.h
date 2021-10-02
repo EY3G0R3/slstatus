@@ -82,7 +82,7 @@ static const struct arg args[] = {
   { run_command         , " / %s", "~/.config/i3blocks/blocks/layout"},
   // igorg: try without volume in status; pa-applet should be enough
   //{ vol_perc            , "%s", "/dev/mixer" },
-  { cpu_perc           , " /  %s%%", NULL},
+  { cpu_perc           , " / CPU %s%%", NULL},
   //{ run_command       , " %s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   { datetime            , " / %s", "%Y-%m-%d" },
   { run_command         , " / %s", "~/bin/igoraudio_status"},
