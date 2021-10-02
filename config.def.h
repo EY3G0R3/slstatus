@@ -83,10 +83,10 @@ static const struct arg args[] = {
   // igorg: try without volume in status; pa-applet should be enough
   //{ vol_perc            , "%s", "/dev/mixer" },
   { cpu_perc           , " /  %s%%", NULL},
-  { run_command         , " / %s", "~/bin/igoraudio_status"},
-  { run_command         , " %s", "~/.config/i3blocks/blocks/volume"},
   //{ run_command       , " %s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   { datetime            , " / %s", "%Y-%m-%d" },
+  { run_command         , " / %s", "~/bin/igoraudio_status"},
+  { run_command         , " %s", "~/.config/i3blocks/blocks/volume"},
   // battery script prints a single space when no battery is installed
   { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
