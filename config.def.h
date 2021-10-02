@@ -88,7 +88,7 @@ static const struct arg args[] = {
   { run_command         , " / %s", "~/bin/igoraudio_status"},
   { run_command         , " %s", "~/.config/i3blocks/blocks/volume"},
   // battery script prints a single space when no battery is installed
-  { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
+  // { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
   //{ run_command         , " %s ", "~/.config/i3blocks/blocks/ssid"},
   //{ run_command         , "%s", "BLOCK_INSTANCE=wlp4s0 ~/.config/i3blocks/blocks/network"},
