@@ -62,6 +62,33 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 
+void progressbar_fancy(
+    unsigned int value,
+    unsigned int num_tiles,
+    char *output,
+    size_t buf_size
+) {
+  unsigned int clamped = value > 100 ? 100 : value;
+  unsigned int num_filled = num_tiles * (float)clamped / 100;
+  unsigned int num_empty = num_tiles - num_filled;
+  *output = 0;
+  if (value >= 40)
+    strncat(output, "", buf_size); // color
+  while (num_filled--) strncat(output, "▰", buf_size);
+  while (num_empty--) strncat(output, "▱", buf_size);
+}
+
+const char *
+cpu_perc_fancy(void) {
+  char output[1024] = "";
+  const char *result = cpu_perc();
+  if (result != NULL) {
+    int percentage = atoi(result);
+    progressbar_fancy(percentage, 10, output, LEN(output));
+  }
+  return bprintf("%s", output);
+}
+
 // alternative icons (requires font-awesome):
 // (period in the end is needed so trailing whitespace is not autostripped
 // and last characters are rendered well in terminal)
@@ -86,7 +113,7 @@ static const struct arg args[] = {
   { datetime            , "     %s", "%Y-%m-%d" },
   { run_command         , "     %s", "~/bin/igoraudio_status"},
   { run_command         , ":%s", "~/.config/i3blocks/blocks/volume"},
-  { cpu_perc            , "      CPU:%s%%     ", NULL},
+  { cpu_perc_fancy      , "      %s     ", NULL},
   // battery script prints a single space when no battery is installed
   // { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
