@@ -84,7 +84,7 @@ cpu_perc_fancy(void) {
   const char *result = cpu_perc();
   if (result != NULL) {
     int percentage = atoi(result);
-    progressbar_fancy(percentage, 10, output, LEN(output));
+    progressbar_fancy(percentage, 5, output, LEN(output));
   }
   return bprintf("%s", output);
 }
