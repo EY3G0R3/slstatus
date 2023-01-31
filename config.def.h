@@ -72,8 +72,11 @@ void progressbar_fancy(
   unsigned int num_filled = num_tiles * (float)clamped / 100;
   unsigned int num_empty = num_tiles - num_filled;
   *output = 0;
-  if (value >= 40)
-    strncat(output, "", buf_size); // color
+
+  // uncomment to color-code the output
+  // if (value >= 40)
+  //   strncat(output, "", buf_size); // color
+
   while (num_filled--) strncat(output, "▰", buf_size);
   while (num_empty--) strncat(output, "▱", buf_size);
 }
