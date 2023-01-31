@@ -113,7 +113,7 @@ static const struct arg args[] = {
   { datetime            , "     %s", "%Y-%m-%d" },
   { run_command         , "     %s", "~/bin/igoraudio_status"},
   { run_command         , ":%s", "~/.config/i3blocks/blocks/volume"},
-  { cpu_perc_fancy      , "      %s     ", NULL},
+  { cpu_perc_fancy      , "      CPU:%s     ", NULL},
   // battery script prints a single space when no battery is installed
   // { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
   // igorg: let's try without ssid/network strength
