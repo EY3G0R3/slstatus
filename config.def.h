@@ -92,6 +92,17 @@ cpu_perc_fancy(void) {
   return bprintf("%s", output);
 }
 
+const char *
+volume_fancy(void) {
+  char output[1024] = "";
+  const char *result = run_command("igoraudio-get-volume");
+  if (result != NULL) {
+    int percentage = atoi(result);
+    progressbar_fancy(percentage, 5, output, LEN(output));
+  }
+  return bprintf("%s", output);
+}
+
 // alternative icons (requires font-awesome):
 // (period in the end is needed so trailing whitespace is not autostripped
 // and last characters are rendered well in terminal)
@@ -114,8 +125,8 @@ static const struct arg args[] = {
   //{ vol_perc            , "%s", "/dev/mixer" },
   //{ run_command       , " %s", "~/.config/i3blocks/blocks/volume-pulseaudio"},
   { datetime            , "     %s", "%Y-%m-%d" },
-  { run_command         , "     %s", "~/bin/igoraudio_status"},
-  { run_command         , ":%s", "~/.config/i3blocks/blocks/volume"},
+  { run_command         , "     %s:", "~/bin/igoraudio_status"},
+  { volume_fancy        , "%s", NULL},
   { cpu_perc_fancy      , "      CPU:%s     ", NULL},
   // battery script prints a single space when no battery is installed
   // { run_command         , " /%s", "~/.config/i3blocks/blocks/battery"},
