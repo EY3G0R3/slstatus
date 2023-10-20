@@ -86,7 +86,7 @@ void progressbar_fancy(
 const char *
 cpu_perc_fancy(void) {
   char output[1024] = "";
-  const char *result = cpu_perc();
+  const char *result = cpu_perc(NULL);
   if (result != NULL) {
     int percentage = atoi(result);
     progressbar_fancy(percentage, 5, output, LEN(output));
