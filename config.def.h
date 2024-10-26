@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
+// disable autoformatting by clang for now
+// clang-format off
+
 #include "slstatus.h"
 
 /* interval between updates (in ms) */
