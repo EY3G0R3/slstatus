@@ -4,6 +4,7 @@
 // clang-format off
 
 #include "slstatus.h"
+#include <stddef.h>
 
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
