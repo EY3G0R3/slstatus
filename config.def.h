@@ -101,7 +101,8 @@ cpu_perc_fancy(void) {
 }
 
 const char *
-volume_fancy(void) {
+volume_fancy(const char* unused) {
+  (void)unused;
   char output[1024] = "";
   const char *result = run_command("igoraudio-get-volume");
   if (result != NULL) {
